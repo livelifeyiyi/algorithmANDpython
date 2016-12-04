@@ -36,6 +36,10 @@ class Solution(object):
 			pre = head
 			head = next
 		return pre
+	def deleteNode(self, node):
+		node.val = node.next.val
+		node.next = node.next.next
+		
 	#删除倒数第k个节点
 	def delkthNode(self, head, k):
 		p1 = p2 = head
